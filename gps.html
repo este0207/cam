@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gps.css">
+    <script src="gps.js" defer></script>
+    <title>Itinéraire du Parc</title>
+</head>
+<body>
+    <header>
+        <header>
+            <img class="logo" src="images_i/logoparc.png" alt="Logo du Parc">
+            <nav class="nav">
+                <a href="index.php">Accueil</a>
+                <a href="billetterie.php">Billetterie</a>
+                <a href="animaux.php">Animaux</a>
+                <a href="services.php">Services</a>
+            </nav>
+        </header>
+    </header>
+    <h1>Planifiez votre trajet dans le Parc</h1>
+    <div id="controls">
+        <label for="start">Position actuelle :</label>
+        <select id="start">
+            <option value="Ara/Perroquet">Ara/Perroquet</option>
+            <option value="GrandHocco">Grand Hocco</option>
+            <option value="Panthère">Panthère</option>
+            <option value="Panda roux">Panda roux</option>
+            <option value="Chèvre naine">Chèvre naine</option>
+            <option value="Lémurien">Lémurien</option>
+            <option value="Chèvre naine/Tortue">Chèvre naine/Tortue</option>
+            <option value="Mouflon">Mouflon</option>
+            <option value="Binturong/Loutre">Binturong/Loutre</option>
+            <option value="Python/Tortue/Iguane">Python/Tortue/Iguane</option>
+            <option value="Rhinocéros/Oryx beisa/Gnou">Rhinocéros/Oryx beisa/Gnou</option>
+            <option value="Suricate">Suricate</option>
+            <option value="Fennec">Fennec</option>
+            <option value="Coati/Saïmiri">Coati/Saïmiri</option>
+            <option value="Tapir">Tapir</option>
+            <option value="Casoar">Casoar</option>
+            <option value="Crocodile nain">Crocodile nain</option>
+            <option value="Guépard">Guépard</option>
+            <option value="Gazelle/Autruche">Gazelle/Autruche</option>
+            <option value="Tamarin">Tamarin</option>
+            <option value="Capucin">Capucin</option>
+            <option value="Ouistiti">Ouistiti</option>
+            <option value="Gibbon">Gibbon</option>
+            <option value="Grivet/Cercopithèque">Grivet/Cercopithèque</option>
+            <option value="Varan de komodo">Varan de komodo</option>
+            <option value="Girafe">Girafe</option>
+            <option value="Eléphant">Eléphant</option>
+            <option value="Hyène">Hyène</option>
+            <option value="Loup à crinière">Loup à crinière</option>
+            <option value="Zèbre">Zèbre</option>
+            <option value="Lion">Lion</option>
+            <option value="Macaque crabier">Macaque crabier</option>
+            <option value="Cerf">Cerf</option>
+            <option value="Vautour">Vautour</option>
+            <option value="Daim/Antilope/Nilgat">Daim/Antilope/Nilgat</option>
+            <option value="Loup europe">Loup europe</option>
+            <option value="Cigogne/Marabout">Cigogne/Marabout</option>
+            <option value="Hippopotame">Hippopotame</option>
+            <option value="Oryx gazelle/Watusi/Ane de somalie">Oryx gazelle/Watusi/Ane de somalie</option>
+            <option value="Yack/Mouton noir">Yack/Mouton noir</option>
+            <option value="Ibis/Tortue">Ibis/Tortue</option>
+            <option value="Pécari">Pécari</option>
+            <option value="Tamanoir/Flamant rose/Nandou">Tamanoir/Flamant rose/Nandou</option>
+            <option value="Emeu/Wallaby">Emeu/Wallaby</option>
+            <option value="Porc-épic">Porc-épic</option>
+            <option value="Lynx">Lynx</option>
+            <option value="Serval">Serval</option>
+            <option value="Chien des buissons">Chien des buissons</option>
+            <option value="Tigre">Tigre</option>
+            <option value="Bison">Bison</option>
+            <option value="Ane de provence/Dromadaire">Ane de provence/Dromadaire</option>
+        </select>
+        <label for="destination">Destination :</label>
+        <select id="destination">
+            <option value="Ara/Perroquet">Ara/Perroquet</option>
+            <option value="GrandHocco">Grand Hocco</option>
+            <option value="Panthère">Panthère</option>
+            <option value="Panda roux">Panda roux</option>
+            <option value="Chèvre naine">Chèvre naine</option>
+            <option value="Lémurien">Lémurien</option>
+            <option value="Chèvre naine/Tortue">Chèvre naine/Tortue</option>
+            <option value="Mouflon">Mouflon</option>
+            <option value="Binturong/Loutre">Binturong/Loutre</option>
+            <option value="Python/Tortue/Iguane">Python/Tortue/Iguane</option>
+            <option value="Rhinocéros/Oryx beisa/Gnou">Rhinocéros/Oryx beisa/Gnou</option>
+            <option value="Suricate">Suricate</option>
+            <option value="Fennec">Fennec</option>
+            <option value="Coati/Saïmiri">Coati/Saïmiri</option>
+            <option value="Tapir">Tapir</option>
+            <option value="Casoar">Casoar</option>
+            <option value="Crocodile nain">Crocodile nain</option>
+            <option value="Guépard">Guépard</option>
+            <option value="Gazelle/Autruche">Gazelle/Autruche</option>
+            <option value="Tamarin">Tamarin</option>
+            <option value="Capucin">Capucin</option>
+            <option value="Ouistiti">Ouistiti</option>
+            <option value="Gibbon">Gibbon</option>
+            <option value="Grivet/Cercopithèque">Grivet/Cercopithèque</option>
+            <option value="Varan de komodo">Varan de komodo</option>
+            <option value="Girafe">Girafe</option>
+            <option value="Eléphant">Eléphant</option>
+            <option value="Hyène">Hyène</option>
+            <option value="Loup à crinière">Loup à crinière</option>
+            <option value="Zèbre">Zèbre</option>
+            <option value="Lion">Lion</option>
+            <option value="Macaque crabier">Macaque crabier</option>
+            <option value="Cerf">Cerf</option>
+            <option value="Vautour">Vautour</option>
+            <option value="Daim/Antilope/Nilgat">Daim/Antilope/Nilgat</option>
+            <option value="Loup europe">Loup europe</option>
+            <option value="Cigogne/Marabout">Cigogne/Marabout</option>
+            <option value="Hippopotame">Hippopotame</option>
+            <option value="Oryx gazelle/Watusi/Ane de somalie">Oryx gazelle/Watusi/Ane de somalie</option>
+            <option value="Yack/Mouton noir">Yack/Mouton noir</option>
+            <option value="Ibis/Tortue">Ibis/Tortue</option>
+            <option value="Pécari">Pécari</option>
+            <option value="Tamanoir/Flamant rose/Nandou">Tamanoir/Flamant rose/Nandou</option>
+            <option value="Emeu/Wallaby">Emeu/Wallaby</option>
+            <option value="Porc-épic">Porc-épic</option>
+            <option value="Lynx">Lynx</option>
+            <option value="Serval">Serval</option>
+            <option value="Chien des buissons">Chien des buissons</option>
+            <option value="Tigre">Tigre</option>
+            <option value="Bison">Bison</option>
+            <option value="Ane de provence/Dromadaire">Ane de provence/Dromadaire</option>
+        </select>
+        <button onclick="drawRoute()">Afficher le trajet</button>
+    </div>
+        <div id="map-container">
+                <img src="images_i/zoo-map.jpg" id="map" alt="Carte du Parc">
+                <canvas id="canvas" width="1200" height="630"></canvas>
+            </div>
+        </div>
+
+</body>
+</html>
